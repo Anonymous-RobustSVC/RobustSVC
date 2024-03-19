@@ -230,7 +230,7 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 </tr>
 <tr class="even">
-<td colspan="4">Source 6 transcript :
+<td colspan="4">Source 1 transcript :
 <em><strong>"如果真的遇见你"</strong></em> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <audio controls>
 				<source src="audios\noisy\source\5.wav" type="audio/mpeg">
@@ -352,7 +352,7 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 </tr>
 <tr class="even">
-<td colspan="4">Source 1 transcript :
+<td colspan="4">Source 6 transcript :
 <em><strong>"哦哦原来你什么都不想要"</strong></em> &emsp;&emsp;&emsp;&emsp;
 <audio controls>
 				<source src="audios\noisy\source\0.wav" type="audio/mpeg">
