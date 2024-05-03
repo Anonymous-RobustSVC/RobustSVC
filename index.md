@@ -112,51 +112,51 @@ quality.
 			<td><b>3.62 ± 0.16</b></td>
 			<td><b>3.88 ± 0.14</b></td>
 		</tr>
-
-
+	</tbody>
 </table>
-    <table cellpadding="0" cellspacing="0">
-        <caption>Table 3:F0 RMSE in different model noise inputs. P&E means Pitch&Energy.</caption>
-        <thead>
-            <tr>
-                <th>Noise Level</th>
-                <th>Origin P&E</th>
-                <th>Denoising Origin P&E </th>
-				<th>Separated Origin P&E </th>
-				<th>RobustSVC </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>SNR=0</td>
-                <td>0.309</td>
-                <td>0.191</td>
-				<td> 0.173</td>
-				<td><b>0.158</b></td>
-            </tr>
-            <tr>
-                <td>SNR=5</td>
-                <td>0.254</td>
-                <td>0.184</td>
-				<td> 0.159</td>
-				<td><b>0.148</b></td>
-            </tr>
-            <tr>
-                <td>SNR=10</td>
-                <td>0.227</td>
-                <td>0.149</td>
-				<td> 0.147</td>
-				<td><b>0.129</b></td>
-            </tr>            
-			<tr>
-                <td>SNR=15</td>
-                <td>0.176</td>
-                <td>0.128</td>
-				<td> 0.127</td>
-				<td><b>0.123</b></td>
-            </tr>
-        </tbody>
-    </table>
+<br><br>
+<table cellpadding="0" cellspacing="0">
+	<caption>Table 3:F0 RMSE in different model noise inputs. P&E means Pitch&Energy.</caption>
+	<thead>
+		<tr>
+			<th>Noise Level</th>
+			<th>Origin P&E</th>
+			<th>Denoising Origin P&E </th>
+			<th>Separated Origin P&E </th>
+			<th>RobustSVC </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>SNR=0</td>
+			<td>0.309</td>
+			<td>0.191</td>
+			<td> 0.173</td>
+			<td><b>0.158</b></td>
+		</tr>
+		<tr>
+			<td>SNR=5</td>
+			<td>0.254</td>
+			<td>0.184</td>
+			<td> 0.159</td>
+			<td><b>0.148</b></td>
+		</tr>
+		<tr>
+			<td>SNR=10</td>
+			<td>0.227</td>
+			<td>0.149</td>
+			<td> 0.147</td>
+			<td><b>0.129</b></td>
+		</tr>            
+		<tr>
+			<td>SNR=15</td>
+			<td>0.176</td>
+			<td>0.128</td>
+			<td> 0.127</td>
+			<td><b>0.123</b></td>
+		</tr>
+	</tbody>
+</table>
 
 
 <br><br>
