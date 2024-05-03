@@ -113,7 +113,7 @@ quality.
 			<td><b>3.88 ± 0.14</b></td>
 		</tr>
 
-	</tbody>
+
 </table>
     <table cellpadding="0" cellspacing="0">
         <caption>Table 3:F0 RMSE in different model noise inputs. P&E means Pitch&Energy.</caption>
