@@ -157,7 +157,8 @@ quality.
 		</tr>
 	</tbody>
 </table>
-
+<br>
+In the realm of music source separation models, we opted for HT-Demucs, a state-of-the-art (SoTA) model, for evaluation. The results demonstrate that RobustSVC surpasses this method in terms of both naturalness and similarity across scenarios encompassing both noisy and noise-free conditions.
 
 <br><br>
 Below are a few audios samples from the target speaker.
