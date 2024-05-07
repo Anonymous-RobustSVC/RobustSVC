@@ -364,6 +364,7 @@ Below are a few audios samples from the target speaker.
 <th>NO</th>
 <th>Origin Pitch&Energy</th>
 <th>Denoising Origin Pitch&Energy</th>
+<th>Separated Origin Pitch&Energy</th>
 <th>Proposed</th>
 </tr>
 </thead>
