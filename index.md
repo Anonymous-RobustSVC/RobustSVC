@@ -194,7 +194,10 @@ Below are a few audios samples from the target speaker.
 <th>NO</th>
 <th>Origin Pitch&Energy</th>
 <th>Denoising Origin Pitch&Energy</th>
+<th>Separated Origin Pitch&Energy</th>
 <th>Proposed</th>
+
+
 </tr>
 </thead>
 <tbody>
@@ -206,6 +209,10 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 <td><audio controls>
 				<source src="audios\clean\denoise\0.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
+				<source src="audios\clean\separated\0.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -234,6 +241,10 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\clean\separated\1.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\clean\proposed\1.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -255,6 +266,10 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 <td><audio controls>
 				<source src="audios\clean\denoise\2.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
+				<source src="audios\clean\separated\2.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -282,6 +297,10 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\clean\separated\3.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\clean\proposed\3.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -303,6 +322,10 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 <td><audio controls>
 				<source src="audios\clean\denoise\4.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
+				<source src="audios\clean\separated\4.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -356,12 +379,16 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\noisy\separated\0.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\noisy\proposed\5.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 </tr>
 <tr class="even">
-<td colspan="4">Source 6 transcript :
+<td colspan="4">Source 1 transcript :
 <em><strong>"如果真的遇见你"</strong></em> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <audio controls>
 				<source src="audios\noisy\source\5.wav" type="audio/mpeg">
@@ -379,6 +406,10 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 <td><audio controls>
 				<source src="audios\noisy\denoise\1.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
+				<source src="audios\noisy\separated\1.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -406,6 +437,10 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\noisy\separated\2.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\noisy\proposed\2.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -427,6 +462,10 @@ Below are a few audios samples from the target speaker.
 			</audio></td>
 <td><audio controls>
 				<source src="audios\noisy\denoise\3.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
+				<source src="audios\noisy\separated\3.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -454,6 +493,10 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\noisy\separated\4.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\noisy\proposed\4.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -478,12 +521,16 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
+				<source src="audios\noisy\separated\5.wav" type="audio/mpeg">
+				Your browser does not support this audio format.
+			</audio></td>
+<td><audio controls>
 				<source src="audios\noisy\proposed\0.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 </tr>
 <tr class="even">
-<td colspan="4">Source 1 transcript :
+<td colspan="4">Source 6 transcript :
 <em><strong>"哦哦原来你什么都不想要"</strong></em> &emsp;&emsp;&emsp;&emsp;
 <audio controls>
 				<source src="audios\noisy\source\0.wav" type="audio/mpeg">
