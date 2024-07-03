@@ -4,13 +4,19 @@ layout: default
 
 ## Abstract
 
-Singing voice conversion (SVC) is hindered by noise sensitivity due to the use of non-robust features like pitch and energy during inference. As clean signals are key for the source audio in SVC, denoising preprocessing offers a viable solution for handling noisy audio, like singing with background music (BGM). However, current denoising methods struggle to fully remove noise or excessively suppress signal components, affecting the naturalness and similarity of the processed audio. To tackle this, our study introduces RobustSVC, a novel SVC framework that converts noisy vocals into clean vocals sung by the target singer. We replace the non-robust feature with a HuBERT-based melody extractor and use adversarial training mechanisms with three discriminators to reduce information leakage in self-supervised representations. Experimental results show that RobustSVC is noise-robust and achieves higher similarity and naturalness than baseline methods in both noisy and clean vocal conditions.
+Singing voice conversion (SVC) is hindered by noise sensitivity due to the use of non-robust features like pitch and energy during inference. 
+As clean signals are key for the source audio in SVC, music source separation preprocessing offers a viable solution for handling noisy audio, like singing with background music (BGM). 
+However, current separating methods struggle to fully remove noise or excessively suppress signal components, affecting the naturalness and similarity of the processed audio. 
+To tackle this, our study introduces RobustSVC, a novel any-to-one SVC framework that converts noisy vocals into clean vocals sung by the target singer. 
+We replace the non-robust feature with a HuBERT-based melody extractor and use adversarial training mechanisms with three discriminators to reduce information leakage in self-supervised representations. 
+Experimental results show that RobustSVC is noise-robust and achieves higher similarity and naturalness than baseline methods in both noisy and clean vocal conditions.
 
-
+<br>
 
 <div style="text-align: center;">
 	<img src="all.jpg" alt="Overall Architecture" style="max-width: 100%">
 </div>
+<br>
 
 ## Conversion Tasks
 
@@ -23,142 +29,9 @@ quality.
 
 - **Proposed** - the proposed RobustSVC system.
 - **Origin Pitch&Energy** - method is the same as the proposed, except that it directly input pitch and energy into the melody encoder.
-- **Denoising Origin Pitch&Energy** - method utilizes
- the same model as baseline1, with the distinction that the pitch
- and energy are extracted from audio processed by a denoising
- model.
- - **Separated Origin Pitch&Energy** - method utilizes
+- **Separated Origin Pitch&Energy** - method utilizes
  the same model as baseline1, with the distinction that the pitch
  and energy are extracted from audio processed by a music separation model(HT-Demucs).
-
-<br>
-
-## New experiment result(Following Reviewers' Suggestions)
-
-
-
-<table cellpadding="0" cellspacing="0">
-	<caption>Table 1: Overall evaluation. MOS results are reported with 95% confidence intervals. </caption>
-	<thead>
-		<tr>
-			<th>Model</th>
-			<th>Indicator</th>
-			<th>Noisy Vocal</th>
-			<th>Clean Vocal</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td rowspan="3">Origin Pitch&Energy</td>
-			<td>F0 RMSE</td>
-			<td>0.270</td>
-			<td>0.123</td>
-		</tr>
-		<tr>
-			<td>naturalness</td>
-			<td>2.46  ± 0.17 </td>
-			<td>3.22  ± 0.15</td>
-		</tr>
-		<tr>
-			<td>similarity</td>
-			<td>2.55  ± 0.19</td>
-			<td>3.27  ± 0.15 </td>
-		</tr>
-				<tr>
-			<td rowspan="3">Denoising Origin Pitch&Energy</td>
-			<td>F0 RMSE</td>
-			<td>0.268</td>
-			<td>0.142</td>
-		</tr>
-		<tr>
-			<td>naturalness</td>
-			<td>3.50  ± 0.17 </td>
-			<td>3.44  ± 0.16</td>
-		</tr>
-		<tr>
-			<td>similarity</td>
-			<td>3.44  ± 0.15</td>
-			<td> 3.48  ± 0.15  </td>
-		</tr>
-				<tr>
-			<td rowspan="3">Separated Origin Pitch&Energy</td>
-			<td>F0 RMSE</td>
-			<td>0.202</td>
-			<td>0.135</td>
-		</tr>
-		<tr>
-			<td>naturalness</td>
-			<td>3.56  ± 0.16 </td>
-			<td>3.60  ± 0.14</td>
-		</tr>
-		<tr>
-			<td>similarity</td>
-			<td>3.50  ± 0.17</td>
-			<td>3.52  ± 0.15 </td>
-		</tr>
-				<tr>
-			<td rowspan="3">RobustSVC</td>
-			<td>F0 RMSE</td>
-			<td><b>0.193</b></td>
-			<td><b>0.109</b></td>
-		</tr>
-		<tr>
-			<td>naturalness</td>
-			<td><b>3.70 ± 0.17</b></td>
-			<td><b>3.93 ± 0.16</b></td>
-		</tr>
-		<tr>
-			<td>similarity</td>
-			<td><b>3.62 ± 0.16</b></td>
-			<td><b>3.88 ± 0.14</b></td>
-		</tr>
-	</tbody>
-</table>
-<br><br>
-<table cellpadding="0" cellspacing="0">
-	<caption>Table 3:F0 RMSE in different model noise inputs. P&E means Pitch&Energy.</caption>
-	<thead>
-		<tr>
-			<th>Noise Level</th>
-			<th>Origin P&E</th>
-			<th>Denoising Origin P&E </th>
-			<th>Separated Origin P&E </th>
-			<th>RobustSVC </th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>SNR=0</td>
-			<td>0.309</td>
-			<td>0.191</td>
-			<td> 0.173</td>
-			<td><b>0.158</b></td>
-		</tr>
-		<tr>
-			<td>SNR=5</td>
-			<td>0.254</td>
-			<td>0.184</td>
-			<td> 0.159</td>
-			<td><b>0.148</b></td>
-		</tr>
-		<tr>
-			<td>SNR=10</td>
-			<td>0.227</td>
-			<td>0.149</td>
-			<td> 0.147</td>
-			<td><b>0.129</b></td>
-		</tr>            
-		<tr>
-			<td>SNR=15</td>
-			<td>0.176</td>
-			<td>0.128</td>
-			<td> 0.127</td>
-			<td><b>0.123</b></td>
-		</tr>
-	</tbody>
-</table>
-<br>
-In the realm of music source separation models, we opted for HT-Demucs, a state-of-the-art (SoTA) model, for evaluation. The results demonstrate that RobustSVC surpasses this method in terms of both naturalness and similarity across scenarios encompassing both noisy and noise-free conditions.
 
 <br><br>
 Below are a few audios samples from the target speaker.
@@ -181,7 +54,7 @@ Below are a few audios samples from the target speaker.
 			</audio>
 <hr>
 
-<br>
+<br><br>
 
 
 ### Clean Vocal
@@ -193,7 +66,6 @@ Below are a few audios samples from the target speaker.
 <tr class="header">
 <th>NO</th>
 <th>Origin Pitch&Energy</th>
-<th>Denoising Origin Pitch&Energy</th>
 <th>Separated Origin Pitch&Energy</th>
 <th>Proposed</th>
 
@@ -205,10 +77,6 @@ Below are a few audios samples from the target speaker.
 <td>1</td>
 <td><audio controls>
 				<source src="audios\clean\acous\0.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\clean\denoise\0.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -237,10 +105,6 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
-				<source src="audios\clean\denoise\1.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
 				<source src="audios\clean\separated\1.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -262,10 +126,6 @@ Below are a few audios samples from the target speaker.
 <td>3</td>
 <td><audio controls>
 				<source src="audios\clean\acous\2.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\clean\denoise\2.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -293,10 +153,6 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
-				<source src="audios\clean\denoise\3.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
 				<source src="audios\clean\separated\3.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -318,10 +174,6 @@ Below are a few audios samples from the target speaker.
 <td>5</td>
 <td><audio controls>
 				<source src="audios\clean\acous\4.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\clean\denoise\4.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -363,7 +215,7 @@ Below are a few audios samples from the target speaker.
 <tr class="header">
 <th>NO</th>
 <th>Origin Pitch&Energy</th>
-<th>Denoising Origin Pitch&Energy</th>
+
 <th>Separated Origin Pitch&Energy</th>
 <th>Proposed</th>
 </tr>
@@ -373,10 +225,6 @@ Below are a few audios samples from the target speaker.
 <td>1</td>
 <td><audio controls>
 				<source src="audios\noisy\acous\5.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\noisy\denoise\5.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -406,10 +254,6 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
-				<source src="audios\noisy\denoise\1.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
 				<source src="audios\noisy\separated\1.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -431,10 +275,6 @@ Below are a few audios samples from the target speaker.
 <td>3</td>
 <td><audio controls>
 				<source src="audios\noisy\acous\2.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\noisy\denoise\2.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
@@ -462,10 +302,6 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
-				<source src="audios\noisy\denoise\3.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
 				<source src="audios\noisy\separated\3.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -490,10 +326,6 @@ Below are a few audios samples from the target speaker.
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
-				<source src="audios\noisy\denoise\4.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
 				<source src="audios\noisy\separated\4.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
@@ -515,10 +347,6 @@ Below are a few audios samples from the target speaker.
 <td>6</td>
 <td><audio controls>
 				<source src="audios\noisy\acous\0.wav" type="audio/mpeg">
-				Your browser does not support this audio format.
-			</audio></td>
-<td><audio controls>
-				<source src="audios\noisy\denoise\0.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio></td>
 <td><audio controls>
